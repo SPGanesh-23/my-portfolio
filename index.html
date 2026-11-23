@@ -382,6 +382,11 @@
   .ink-drop{position:fixed;z-index:301;pointer-events:none;border-radius:58% 42% 55% 45%/52% 55% 45% 48%;will-change:transform,opacity}
 
   /* ===== Responsive enhancements ===== */
+  /* Prevent decorative hero layers from widening the mobile layout viewport */
+  html{overflow-x:hidden}
+  .hero{overflow-x:clip}
+  @media(max-width:640px){ .portrait-back{transform:translate(10px,10px) rotate(2deg)} .hero-visual{max-width:300px} }
+
   html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
   img,svg,canvas,video{max-width:100%}
   .wrap{padding-left:max(24px,env(safe-area-inset-left));padding-right:max(24px,env(safe-area-inset-right))}
